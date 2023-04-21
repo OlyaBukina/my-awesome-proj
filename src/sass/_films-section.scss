@@ -1,0 +1,71 @@
+.films__container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 32px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+    }
+
+}
+
+.film__item {
+    cursor: pointer;
+}
+
+.film__poster {
+    min-height: 402px;
+    object-fit: cover;
+    max-width: 280px;
+
+    @media screen and (min-width: 768px) {
+        height: 455px;
+        min-width: 336px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        min-height: 574px;
+        min-width: 394px;
+    }
+
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.film__name {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 500;
+    line-height: 1.33;
+    height: 16px;
+    overflow: hidden;
+    color: $main-text-color;
+
+    @media screen and (min-width: 1280px) {
+        height: 24px;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 1.20;
+    }
+}
+
+.film__discription {
+    text-transform: uppercase;
+    display: block;
+    color: $accent-color;
+    font-weight: 500;
+
+    @media screen and (min-width: 1280px) {
+        height: 24px;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 1.20;
+    }
+}
